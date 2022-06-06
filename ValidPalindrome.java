@@ -9,17 +9,17 @@ class Solution {
         String rev="";
         String str = "";
         s = s.toLowerCase();
-		for(int i=0;i<s.length();i++) {
-            if(s.charAt(i)>=97 && s.charAt(i)<=122){
-			    str = str+s.charAt(i);
-            }
-		}
+	for(int i=0;i<s.length();i++) {
+        	if(s.charAt(i)>=97 && s.charAt(i)<=122 || s.charAt(i)>=48 && s.charAt(i)<=57){
+			str = str+s.charAt(i);
+            	}
+	}
         for(int i=str.length()-1;i>=0;i--) {
             rev=rev+str.charAt(i);
-		}
-		if(str.equals(rev)){
-		    return true;
-		}
-		return false;
+	}
+	if(str.equals(rev)){
+	    return true;
+	}
+	return false;
     }
 }
